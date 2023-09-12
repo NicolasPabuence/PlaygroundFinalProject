@@ -1,0 +1,14 @@
+{% extends "mi_app/base.html" %}
+{% load static %}
+
+{% block content %}
+    <h2>Detalles del Zapato</h2>
+    <img src="{{ zapato.imagen.url }}" alt="{{ zapato.nombre }}" width="200">
+    <h3>{{ zapato.nombre }}</h3>
+    <p><strong>Descripción:</strong> {{ zapato.descripcion }}</p>
+    <p><strong>Precio:</strong> ${{ zapato.precio }}</p>
+    <p><strong>Categoría:</strong> {{ zapato.categoria.nombre }}</p>
+    <a href="{% url 'lista_zapatos' %}">Volver a la lista de zapatos</a>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+{% endblock %}
