@@ -1,0 +1,40 @@
+{% extends 'mi_app/home.html' %}
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="container">
+
+
+<p><h4>{{bateria.titulo}}</h4></p>
+{% if jordan.imagenZapatilla %}
+    
+{% endif %}
+<p>Marca: {{jordan.marca}}</p>
+<p>Modelo: {{jordan.modelo}}</p>
+<p>Descripción: {{jordan.descripcion}}</p>
+<p>Precio(US$): {{jordan.precio}}</p>
+
+</div>
+<br>
+<div class="container">
+    <h4>Comentarios...</h4>
+    <br>
+    <div class="container">
+    {% if not jordam.comentarios.all %}
+        No han comentado este articulo
+    {% else %}
+        {% for comentario in jordan.comentarios.all %}
+        <p><strong>{{comentario.nombre}}</strong></p>
+        <p>{{comentario.mensaje}}</p>
+        <p><small>{{comentario.fechaComentario}}</small></p>
+        <hr>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'comentario' bateria.pk %}">Agrega un Comentario</a>
+    </div>
+</div>
+<br>
+{% endblock %}

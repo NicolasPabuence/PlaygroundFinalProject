@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Nunito:wght@200&family=Poppins:wght@300&family=Quattrocento&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
-    <title>Venta y Permuta de Instrumentos Musicales</title>
+    <title>OvansTeam</title>
 </head>
 <body>
   <img src="" alt="">
@@ -28,25 +28,19 @@
                   <a class="nav-link" href="{% url 'home' %}"><span class="text-primary">INICIO</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'guitarras' %}">Guitarras</a>
+                  <a class="nav-link" href="{% url 'nike' %}">Nike</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'bajos' %}">Bajos</a>
+                  <a class="nav-link" href="{% url 'adidas' %}">Adidas</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'pedales' %}">Pedales</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'amplificadores' %}">Amplificadores</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'teclados' %}">Teclados</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'baterias' %}">Baterias</a>
+                  <a class="nav-link" href="{% url 'jordan' %}">Jordan</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'otros' %}">Otros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'acercaDeMi' %}">Conóceme</a>
                 </li>
                 <div class="container"></div>
                 <div class="container"></div>
@@ -95,7 +89,7 @@
   <div class="container text-center">
     <div class="">
         <div>
-            <h2>Bienvenido (a) a la <span class="text-primary">Venta y Permuta de Instrumentos Musicales</span></h2>
+            <h2>Bienvenido (a) a la <span class="text-primary">Venta de zapatillas?</span></h2>
         </div>
     </div>
 </div>
@@ -103,14 +97,14 @@
 </section>
 
 
-    <!-- Link Venta/Permuta Instrumento -->
+    <!-- Link compra --->
 
     <section class="p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
       <div class="container">
           <div class="">
               <div class="text-center">
                   <p class="lead my-4">
-                    Quieres vender o permutar tu instrumento musical?
+                    Quieres comprar zapatillas?
                   </p>
                   <a href="{% url 'nuevo' %}"><button type="submit" class="btn btn-primary">Agregalo acá</button></a>
               </div>
@@ -136,7 +130,7 @@
 
   <footer class="p-5 bg-dark text-white text-center position-relative">
       <div class="container">
-          <p class="lead text-white">Copyright &copy; 2022 Johannes Pérez</p>
+          <p class="lead text-white">Copyright &copy; 2023 Nicolas Pabuence</p>
           <a href="" class="position-absolute bottom-0 end-0 p-5">
               <i class="bi bi-arrow-up-circle h1"></i>
           </a>

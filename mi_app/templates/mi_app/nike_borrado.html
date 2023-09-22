@@ -1,0 +1,39 @@
+{% extends 'mi_app/home.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% if user.id == nike_borrado.usuario.id %}
+<div class="container text-center">
+
+<form method="post">{% csrf_token %}
+    Estás seguro que deseas borrar este articulo {{nike_borrado.marca}} {{nike_borrado.modelo}} ?
+    <p>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+    </p>
+</form>
+
+</div>
+{% else %}
+<div class="container">
+<h4>No tienes acceso a esta pagina!</h4>
+</div>
+{% endif %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

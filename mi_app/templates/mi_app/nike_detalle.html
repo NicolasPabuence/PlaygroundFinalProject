@@ -1,0 +1,41 @@
+{% extends 'mi_app/incio.html' %}
+
+{% block content %}
+
+<br>
+<br>
+
+<div class="container">
+
+<p><h4>{{nike.titulo}}</h4></p>
+{% if nike.imagenZapatilla %}
+    <p><img src="{{nike.imagenZapatilla.url}}" alt=""></p>
+{% endif %}
+<p>Modelo: {{amplificador.modelo}}</p>
+<p>Descripción: {{amplificador.descripcion}}</p>
+<p>Año: {{amplificador.year}}</p>
+<p>Precio(US$): {{amplificador.precio}}</p>
+<p>Teléfono de Contacto: {{amplificador.telefonoContacto}}</p>
+<p>Email de Contacto: {{amplificador.emailContacto}}</p>
+
+</div>
+<br>
+<div class="container">
+    <h4>Comentarios...</h4>
+    <br>
+    <div class="container">
+    {% if not nike.comentarios.all %}
+        No han comentado este articulo
+    {% else %}
+        {% for comentario in nike.comentarios.all %}
+        <p><strong>{{comentario.nombre}}</strong></p>
+        <p>{{comentario.mensaje}}</p>
+        <p><small>{{comentario.fechaComentario}}</small></p>
+        <hr>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'comentario' nike.pk %}">Agrega un Comentario</a>
+    </div>
+</div>
+<br>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'mi_app/home.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{% if user.id == jordan.usuario.id %}
+<div class="container text-center">
+
+<form method="post">{% csrf_token %}
+    <h4>Estás seguro(a) que deseas borrar este articulo {{jordan.marca}} {{jordan.modelo}} ?</h4>
+    <p>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+    </p>
+</form>
+
+</div>
+{% endif %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}
